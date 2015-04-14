@@ -1,0 +1,75 @@
+/* H5BP FUNCTIONAL CLASSES
+ * ========================================================================== */
+
+/*
+ * Image replacement
+ * Instructions: https://github.com/h5bp/html5-boilerplate/commit/adecc5da035d6d76b77e3fa95c6abde841073da2
+ */
+
+.ir {
+	background-color: transparent;
+	border: 0;
+	overflow: hidden;
+	/* IE 6/7 fallback */
+	*text-indent: -9999px;
+}
+
+.ir:before {
+	content: "";
+	display: block;
+	width: 0;
+	height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.vh,
+.vhidden,
+.visuallyhidden {
+	@include visuallyhidden();
+
+	/*
+	 * Extends the .vhidden class to allow the element to be focusable
+	 * when navigated to via the keyboard: h5bp.com/p
+	 */
+	&.focusable:active,
+	&.focusable:focus {
+		@include undovisuallyhidden();
+	}
+}
+
+.supports-js .js-hidden {
+	display: none;
+}
+
+.supports-no-js .no-js-hidden {
+	display: none;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+	visibility: hidden;
+}
+
+/* CLEARFIX
+/* Apply the cf code to the included elements - means you don't need to use class cf all over the place
+ * ========================================================================== */
+
+.cf,
+.clearfix {
+	@include clearfix-micro();
+}

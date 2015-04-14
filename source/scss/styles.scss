@@ -1,1 +1,97 @@
 // Styles
+
+
+@import "utilities/normalize";
+@import "utilities/mixins";
+
+@import "functional";
+
+	
+/* apply a natural box layout model to all elements, but allowing components to change */
+html, body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	font-family: 'Open Sans', 'Arial', sans-serif;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	flex: 1;
+}
+
+// Objects
+// =================
+
+.o-section {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.o-section__content {
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	width: 960px;
+}
+
+	.u-one-half {
+		flex: 1;
+	}
+
+
+// Compontents
+// =================
+
+// Hero
+.c-hero {
+
+	.c-hero__about-me {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		flex-grow: 2;
+	}
+
+	.c-hero__display-pic {
+		flex-grow: 1;
+	}
+}
+
+// Themes
+// =================
+
+.t-deep-blue {
+	color: #fff;
+	background-color: #232830;
+
+	a {
+		color: #afc2d0;
+	}
+}
+
+// Utility
+// =================
+
+.u-circle-radius {
+	border-radius: 999px;
+}
+
+
+// Links
+// =================
+
+a {
+	color: #7595ae;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
