@@ -6,6 +6,9 @@
 
 @import "functional";
 
+// Variables
+$hex-link: #7595ae;
+
 	
 /* apply a natural box layout model to all elements, but allowing components to change */
 html, body {
@@ -41,22 +44,23 @@ body {
 	width: 960px;
 }
 
-	.u-one-half {
-		flex: 1;
-	}
-
 
 // Compontents
 // =================
 
 // Hero
 .c-hero {
+	@extend %u-flex-component;
 
 	.c-hero__about-me {
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
 		flex-grow: 2;
+
+		.content {
+			margin-bottom: 20px;
+		}
 	}
 
 	.c-hero__display-pic {
@@ -71,8 +75,10 @@ body {
 	color: #fff;
 	background-color: #232830;
 
-	a {
-		color: #afc2d0;
+	.content {
+		a {
+			color: #afc2d0;
+		}
 	}
 }
 
@@ -83,15 +89,59 @@ body {
 	border-radius: 999px;
 }
 
+// Turn a component into a flex object
+%u-flex-component {
+	display: flex;
+	
+	// Ensure its direct component parts are regarded as flex items
+	& > [class^="c-"],
+	& > [class*=" c-"], {
+		flex: 1;
+	}
+}
+
 
 // Links
 // =================
 
 a {
-	color: #7595ae;
+	color: $hex-link;
 	text-decoration: none;
 
 	&:hover {
 		text-decoration: underline;
 	}
+}
+
+.btn-group {
+	.btn {
+		margin-right: 15px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+
+.btn {
+	display: inline-block;
+	padding: 10px 15px;
+	border-radius: 3px;
+	text-align: center;
+	font-weight: 600;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.btn--primary {
+	color: #232830;
+	border: 2px solid $hex-link;
+	background-color: $hex-link;
+}
+
+.btn--secondary {
+	border: 2px solid $hex-link;
 }
