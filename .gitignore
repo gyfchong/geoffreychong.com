@@ -1,2 +1,5 @@
-app
-node_modules
+app/
+.DS_Store
+.git/
+node_modules/
+.sass-cache/
