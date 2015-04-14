@@ -11,7 +11,7 @@ gulp.task('sass', function () {
 	.pipe(sourcemaps.init())
 		.pipe(sass())
 	.pipe(sourcemaps.write())
-	.pipe(gulp.dest('./app/css'))
+	.pipe(gulp.dest('./build/css'))
 	.pipe(browserSync.reload({stream:true}));
 });
 
@@ -20,7 +20,7 @@ gulp.task('js', function() {
   return gulp.src(['./source/js/*.js'])
 	.pipe(sourcemaps.init())
 	.pipe(sourcemaps.write())
-	.pipe(gulp.dest('./app/js/'));
+	.pipe(gulp.dest('./build/js/'));
 });
 
 gulp.task('js-watch', ['js'], browserSync.reload);
@@ -29,13 +29,11 @@ gulp.task('js-watch', ['js'], browserSync.reload);
 // Browsersync setup
 gulp.task('serve', ['sass', 'js'], function() {
 	browserSync({
-		server: {
-			baseDir: "./app"
-		}
+		server: "build"
 	});
 
 	gulp.watch("./source/scss/*.scss", ['sass']);
-	gulp.watch("./app/*.html").on('change', reload);
+	gulp.watch("./build/*.html").on('change', reload);
 	gulp.watch("./source/js/*.js", ['js-watch']);
 });
 
