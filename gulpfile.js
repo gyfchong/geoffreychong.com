@@ -1,20 +1,44 @@
 var gulp = require('gulp'),
-	watch = require('gulp-watch'),
 	sass = require('gulp-sass'),
-	sourcemaps = require('gulp-sourcemaps');
+	sourcemaps = require('gulp-sourcemaps'),
+	browserSync = require('browser-sync'),
+	reload = browserSync.reload;
  
+
+// SaSS process
 gulp.task('sass', function () {
 	gulp.src('./source/scss/*.scss')
 	.pipe(sourcemaps.init())
 		.pipe(sass())
 	.pipe(sourcemaps.write())
-	.pipe(gulp.dest('./static/css'));
+	.pipe(gulp.dest('./app/css'))
+	.pipe(browserSync.reload({stream:true}));
 });
 
-gulp.task('watch', function() {
-	gulp.watch('./source/scss/*.scss', ['sass']);
+// Javascript Process
+gulp.task('js', function() {
+  return gulp.src(['./source/js/*.js'])
+	.pipe(sourcemaps.init())
+	.pipe(sourcemaps.write())
+	.pipe(gulp.dest('./app/js/'));
 });
 
-gulp.task('default', function() {
-  // place code for your default task here
+gulp.task('js-watch', ['js'], browserSync.reload);
+
+
+// Browsersync setup
+gulp.task('serve', ['sass', 'js'], function() {
+	browserSync({
+		server: {
+			baseDir: "./app"
+		}
+	});
+
+	gulp.watch("./source/scss/*.scss", ['sass']);
+	gulp.watch("./app/*.html").on('change', reload);
+	gulp.watch("./source/js/*.js", ['js-watch']);
 });
+
+
+// Launch server
+gulp.task('default', ['serve']);
