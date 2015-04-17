@@ -1,9 +1,6 @@
 /* ==========================================================================
- * Geoffrey Chong
+ * SCRIPT.JS
  * ========================================================================== */
-
-//= require_self
-//= require_tree ./modules
 
 window.GCHONG = window.GCHONG || {};
 GCHONG.IS_RESPONSIVE = true;
@@ -73,3 +70,4 @@ if (typeof console === 'undefined') {
 	});
 
 }(GCHONG));
+

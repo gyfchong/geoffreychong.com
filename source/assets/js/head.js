@@ -1,0 +1,2 @@
+
+window.GCHONG = window.GCHONG || {};
