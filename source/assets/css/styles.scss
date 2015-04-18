@@ -1,13 +1,23 @@
 // Styles
 
-
-@import "utilities/normalize";
-@import "utilities/mixins";
-
 @import "functional";
 
+@import "plugins/*";
+
+@import "utilities/*";
+
+@import "global/*";
+@import "modules/*";
+
+
+
 // Variables
+$base-spacing-unit: 45px;
+$half-spacing-unit: $base-spacing-unit/2;
+
+$hex-btn-primary: #232830;
 $hex-link: #7595ae;
+$hex-link-hover: #96c0e0;
 
 	
 /* apply a natural box layout model to all elements, but allowing components to change */
@@ -39,9 +49,15 @@ body {
 
 .o-section__content {
 	display: flex;
-	flex-direction: row;
-	margin: 0 auto;
-	width: 960px;
+	flex-direction: column;
+	margin: 0 $half-spacing-unit;
+	max-width: 960px;
+	min-width: 320px;
+	
+	@include bp(m) {
+		flex-direction: row;
+		margin: 0 auto;
+	}
 }
 
 
@@ -52,11 +68,24 @@ body {
 .c-hero {
 	@extend %u-flex-component;
 
+	.o-section__content {
+		@include bp(0, m) {
+			flex-direction: column-reverse;
+			text-align: center;
+		}
+	}
+
 	.c-hero__about-me {
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
 		flex-grow: 2;
+		margin-top: $base-spacing-unit;
+		
+		@include bp(l) {
+			margin-top: 0;
+			margin-right: $base-spacing-unit;
+		}
 
 		.content {
 			margin-bottom: 20px;
@@ -74,12 +103,6 @@ body {
 .t-deep-blue {
 	color: #fff;
 	background-color: #232830;
-
-	.content {
-		a {
-			color: #afc2d0;
-		}
-	}
 }
 
 // Utility
@@ -109,6 +132,7 @@ a {
 	text-decoration: none;
 
 	&:hover {
+		color: $hex-link-hover;
 		text-decoration: underline;
 	}
 }
@@ -137,11 +161,20 @@ a {
 }
 
 .btn--primary {
-	color: #232830;
+	color: $hex-btn-primary;
 	border: 2px solid $hex-link;
 	background-color: $hex-link;
+
+	&:hover {
+		color: $hex-btn-primary;
+		border-color: $hex-link-hover;
+		background-color: $hex-link-hover;
+	}
 }
 
 .btn--secondary {
 	border: 2px solid $hex-link;
+	&:hover {
+		border-color: $hex-link-hover;
+	}
 }
