@@ -138,7 +138,8 @@ gulp.task('jsx', function() {
 gulp.task('html:copy', function() {
 	gulp.src('source/*.html')
 		.pipe(changed('build/'))
-    	.pipe(gulp.dest('build/'));
+    	.pipe(gulp.dest('build/'))
+    	.pipe(notify('HTML COPY: DONE'));
 });
 
 // Start Browsersync server and watch file changes
@@ -149,7 +150,7 @@ gulp.task('server', ['html:copy', 'jsx', 'scss', 'js:head', 'js:vendor', 'js:scr
 
 	gulp.watch('source/*.html', ['html:copy']);
 
-	gulp.watch('source/assets/css/styles.scss', ['scss']);
+	gulp.watch('source/assets/**/*.scss', ['scss']);
 	
 	gulp.watch('source/assets/js/head.js', ['js:head']);
 	gulp.watch('source/assets/js/*.js', ['js:vendor']);
