@@ -1,0 +1,18 @@
+// Section Object
+// 
+// =================
+
+.o-section {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+
+// Provides the wrapper
+.o-section__content {
+	@extend %u-wrapper;
+	display: flex;
+	flex-direction: row;
+}

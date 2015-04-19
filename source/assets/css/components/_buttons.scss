@@ -1,0 +1,41 @@
+.c-btn-group {
+	.c-btn {
+		margin-right: 15px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+
+.c-btn {
+	display: inline-block;
+	padding: 10px 15px;
+	border-radius: 3px;
+	text-align: center;
+	font-weight: 600;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.c-btn--primary {
+	color: $hex-btn-primary;
+	border: 2px solid $hex-link;
+	background-color: $hex-link;
+
+	&:hover {
+		color: $hex-btn-primary;
+		border-color: $hex-link-hover;
+		background-color: $hex-link-hover;
+	}
+}
+
+.c-btn--secondary {
+	border: 2px solid $hex-link;
+	&:hover {
+		border-color: $hex-link-hover;
+	}
+}

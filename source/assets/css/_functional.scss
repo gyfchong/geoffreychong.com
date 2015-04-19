@@ -97,3 +97,48 @@
 .clearfix:after {
 	clear: both;
 }
+
+
+// Utilities
+// =================
+
+%u-circle-radius {
+	border-radius: 999px;
+}
+
+// Turn a component into a flex object
+%u-flex-component {
+	display: flex;
+	
+	// Ensure its direct component parts are regarded as flex items
+	& > [class^="c-"],
+	& > [class*=" c-"], {
+		flex: 1;
+	}
+}
+
+
+%u-wrapper {
+	margin: 0 $half-spacing-unit;
+	max-width: 960px;
+	min-width: 320px;
+
+	@include bp(m) {
+		margin: 0 auto;
+	}
+}
+
+%u-horiz-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+
+	li {
+		display: inline-block;
+
+		a {
+			display: block;
+		}
+	}
+}

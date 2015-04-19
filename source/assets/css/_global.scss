@@ -1,0 +1,27 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html, body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	font-family: 'Open Sans', 'Arial', sans-serif;
+
+	@include bp(0, s) {
+		flex-direction: row;
+		width: 100%;
+	}
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+a {
+	color: $hex-link;
+	text-decoration: none;
+
+	&:hover {
+		color: $hex-link-hover;
+		text-decoration: underline;
+	}
+}

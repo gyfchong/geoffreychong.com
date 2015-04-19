@@ -1,0 +1,52 @@
+// =================
+// Component: Hero
+// ---
+// <div class="c-hero">
+// 		<div class="c-hero__about-me"></div>
+// 		<div class="c-hero__display-pic">
+//			<img />
+//		</div>
+// </div>
+// =================
+
+.c-hero {
+	@extend %t-deep-blue;
+	@extend %u-flex-component;
+
+	.o-section__content {
+		@include bp(0, m) {
+			flex-direction: column-reverse;
+			text-align: center;
+		}
+
+		@include bp(0, xxs) {
+			margin-top: $base-spacing-unit;
+			margin-bottom: $base-spacing-unit;
+		}
+	}
+
+	.c-hero__about-me {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		flex-grow: 2;
+		margin-top: $base-spacing-unit;
+		
+		@include bp(l) {
+			margin-top: 0;
+			margin-right: $base-spacing-unit;
+		}
+
+		.content {
+			margin-bottom: 20px;
+		}
+	}
+
+	.c-hero__display-pic {
+		flex-grow: 1;
+
+		img {
+			@extend %u-circle-radius;
+		}
+	}
+}
