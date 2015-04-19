@@ -10,7 +10,6 @@
 // =================
 
 .c-hero {
-	@extend %t-deep-blue;
 	@extend %u-flex-component;
 
 	.o-section__content {
@@ -29,12 +28,20 @@
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-		flex-grow: 2;
+		
 		margin-top: $base-spacing-unit;
 		
+		@include bp(m, m) {
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+		}
+
 		@include bp(l) {
 			margin-top: 0;
 			margin-right: $base-spacing-unit;
+			width: 100%;
+			flex: 2;
 		}
 
 		.content {
@@ -44,9 +51,22 @@
 
 	.c-hero__display-pic {
 		flex-grow: 1;
+		margin: 0 auto;
+		width: 50%;
+
+		@include bp(m, m) {
+			width: 30%;
+		}
+
+		@include bp(l) {
+			flex: 1;
+		}
 
 		img {
 			@extend %u-circle-radius;
+			display: block;
+			width: 100%;
+			height: auto;
 		}
 	}
 }

@@ -121,7 +121,6 @@
 %u-wrapper {
 	margin: 0 $half-spacing-unit;
 	max-width: 960px;
-	min-width: 320px;
 
 	@include bp(m) {
 		margin: 0 auto;
