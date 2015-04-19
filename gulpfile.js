@@ -14,7 +14,8 @@ var gulp = require('gulp')
 	cssGlobbing = require('gulp-css-globbing'),
 	jsxTransform = require('gulp-react'),
 	changed = require('gulp-changed'),
-	clean = require('gulp-rimraf');
+	clean = require('gulp-rimraf'),
+	autoprefixer = require('gulp-autoprefixer');
 
 
 // Compile SCSS
@@ -34,6 +35,10 @@ gulp.task('scss', function() {
 		.pipe(sourcemaps.init())
 			.pipe(sass())
 		.pipe(sourcemaps.write())
+		.pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
 		.pipe(gulp.dest('build/assets/css'))
 		.pipe(notify('SCSS: DONE'));
 });
