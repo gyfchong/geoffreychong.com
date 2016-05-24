@@ -10,7 +10,7 @@
 // =================
 
 .c-hero {
-	@extend %u-flex-component;
+	display: flex;
 
 	.o-section__content {
 		@include bp(0, m) {
