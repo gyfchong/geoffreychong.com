@@ -102,8 +102,10 @@
 // Utilities
 // =================
 
-%u-circle-radius {
-	border-radius: 999px;
+%u-list-reset{
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 // Turn a component into a flex object
