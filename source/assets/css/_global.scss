@@ -1,8 +1,8 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html, body {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
+	// height: 100%;
+	// display: flex;
+	// flex-direction: column;
 	box-sizing: border-box;
 	color: $hex-font;
 	font-family: 'Open Sans', 'Arial', sans-serif;
@@ -31,7 +31,7 @@ a {
 p {
 	@include font-size(16);
 	margin-top: 0;
-	font-weight: 600;
+	font-weight: 400;
 	color: $hex-font;
 }
 

@@ -25,7 +25,7 @@
 	}
 
 	.c-hero__about-me {
-		display: flex;
+		@extend %u-flex-component;
 		justify-content: center;
 		flex-direction: column;
 		margin-top: $base-spacing-unit;
@@ -48,6 +48,8 @@
 	}
 
 	.c-hero__display-pic {
+		@extend %u-flex-component;
+		align-items: center;
 		flex-grow: 1;
 		margin: 0 auto;
 		width: 50%;
@@ -63,7 +65,7 @@
 		img {
 			display: block;
 			width: 100%;
-			height: auto;
+			height: 100%;
 		}
 	}
 }
