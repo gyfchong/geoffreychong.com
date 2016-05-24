@@ -1,7 +1,19 @@
 // Variables
-$base-spacing-unit: 45px;
+$base-spacing-unit: 50px;
 $half-spacing-unit: $base-spacing-unit/2;
 
-$hex-btn-primary: #232830;
-$hex-link: #7595ae;
-$hex-link-hover: #96c0e0;
+// Colours
+$hex-font: #444;
+
+$hex-link: #168ec6;
+$hex-link-hover: #274a83;
+
+$hex-btn-primary-text: #ffffff;
+$hex-btn-primary-bg: $hex-link;
+$hex-btn-primary-hover: $hex-link-hover;
+
+
+
+$h1-size: 42;
+$h2-size: 40;
+$h3-size: 30;

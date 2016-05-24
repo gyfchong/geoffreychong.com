@@ -1,35 +1,46 @@
 .c-btn-group {
 	.c-btn {
-		margin-right: 15px;
+		margin-bottom: 15px;
 
 		&:last-child {
-			margin-right: 0;
+			margin: 0;
+		}
+
+		@include bp(m) {
+			margin-right: 15px;
+			margin-bottom: 0;
 		}
 	}
 }
 
 
 .c-btn {
-	display: inline-block;
+	display: block;
 	padding: 10px 15px;
 	border-radius: 3px;
 	text-align: center;
 	font-weight: 600;
+	transition: all .3s;
 
 	&:hover {
 		text-decoration: none;
 	}
+
+	@include bp(m) {
+		display: inline-block;
+	}
 }
 
 .c-btn--primary {
-	color: $hex-btn-primary;
-	border: 2px solid $hex-link;
-	background-color: $hex-link;
+	color: $hex-btn-primary-text;
+	border: 2px solid $hex-btn-primary-bg;
+	background-color: $hex-btn-primary-bg;
+	transition: all .3s ease;
 
 	&:hover {
-		color: $hex-btn-primary;
-		border-color: $hex-link-hover;
-		background-color: $hex-link-hover;
+		color: $hex-btn-primary-text;
+		border-color: $hex-btn-primary-hover;
+		background-color: $hex-btn-primary-hover;
 	}
 }
 

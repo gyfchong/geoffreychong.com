@@ -3,8 +3,6 @@
  * ========================================================================== */
 
 window.GCHONG = window.GCHONG || {};
-GCHONG.IS_RESPONSIVE = true;
-GCHONG.IS_EDIT = GCHONG.IS_EDIT || false;
 
 /* Stop console.log errors */
 if (typeof console === 'undefined') {
@@ -51,11 +49,10 @@ if (typeof console === 'undefined') {
 
 	NAMESPACE.INIT = {
 		visual: function() {
-			
 
 		},
 		functional: function() {
-			
+
 		}
 	};
 
@@ -70,4 +67,3 @@ if (typeof console === 'undefined') {
 	});
 
 }(GCHONG));
-

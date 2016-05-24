@@ -109,7 +109,7 @@
 // Turn a component into a flex object
 %u-flex-component {
 	display: flex;
-	
+
 	// Ensure its direct component parts are regarded as flex items
 	& > [class^="c-"],
 	& > [class*=" c-"], {
@@ -119,11 +119,13 @@
 
 
 %u-wrapper {
-	margin: 0 $half-spacing-unit;
+	margin: 0 auto;
+	padding: 0 $base-spacing-unit;
+	min-width: 320px;
 	max-width: 960px;
 
-	@include bp(m) {
-		margin: 0 auto;
+	@include bp(xl) {
+		padding: 0;
 	}
 }
 

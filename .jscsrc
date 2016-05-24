@@ -1,0 +1,65 @@
+// more details and documentation from: https://github.com/jscs-dev/node-jscs
+{
+	"disallowSpacesInNamedFunctionExpression": {
+		"beforeOpeningRoundBrace": true // no spaces at the start of a function bracket
+	},
+	"disallowSpacesInFunctionExpression": {
+		"beforeOpeningRoundBrace": true // no spaces at the start of a function bracket
+	},
+	"disallowSpacesInAnonymousFunctionExpression": {
+		"beforeOpeningRoundBrace": true // no spaces at the start of a function bracket
+	},
+	"disallowSpacesInFunctionDeclaration": {
+		"beforeOpeningRoundBrace": true // no spaces at the start of a function bracket
+	},
+	"disallowEmptyBlocks": true,
+	"disallowSpacesInsideArrayBrackets": true, // no spaces inside array brackets
+	"disallowSpacesInsideParentheses": true, // no spaces inside parentheses
+	"disallowQuotedKeysInObjects": true, // don't use quoted strings in objects
+	"disallowSpaceAfterObjectKeys": true, // no space between key and : in an object (key: 'value')
+	"disallowSpaceAfterPrefixUnaryOperators": true, // no space after Unary operators (++, --, +, -, ~, !) that appear before vars
+	"disallowSpaceBeforePostfixUnaryOperators": true, // no space after Unary operators (++, --) that appear after vars
+	"disallowSpaceBeforeBinaryOperators": [
+		"," // no space before commas
+	],
+	"disallowMixedSpacesAndTabs": true, // can't have tabs and spaces on the same line
+	"disallowTrailingWhitespace": true, // no trailing whitespace
+	"disallowTrailingComma": true, // no trailing comma in arrays/objects
+	"disallowYodaConditions": true, // don't operate like yoda (1 == a) vs (a == 1)
+	"disallowKeywords": [ "with" ], // don't use the "with" keyword
+	"disallowMultipleLineBreaks": true, // don't have multiple line breaks in a row
+
+
+	"requireSpaceBeforeBlockStatements": true, // make sure you have a space between function and curly brackets
+	"requireParenthesesAroundIIFE": true, // immediately invoked function expressions require brackets around it
+	"requireSpacesInConditionalExpression": true, // require spaces in conditionals
+	"requireMultipleVarDecl": true, // variables together should be grouped into a single var
+	"requireBlocksOnNewline": 1, // blocks can be single line ONLY when there is 1 line in the block
+	"requireCommaBeforeLineBreak": true, // enforces commas to be at the end of a line
+	"requireSpaceBeforeBinaryOperators": true, // space before binary operators (e.g. ===)
+	"requireSpaceAfterBinaryOperators": true, // space after binary operators (e.g. ===)
+	"requireCamelCaseOrUpperCaseIdentifiers": true, // requires identifiers to be camelCased or UPPERCASE_WITH_UNDERSCORES
+	"requireLineFeedAtFileEnd": true,
+	"requireCapitalizedConstructors": true,
+	"requireDotNotation": true, // dot notation for objects instead of square brackets
+	"requireCurlyBraces": [
+			"do"
+	],
+	"requireSpaceAfterKeywords": [
+		"if",
+		"else",
+		"for",
+		"while",
+		"do",
+		"switch",
+		"case",
+		"return",
+		"try",
+		"catch",
+		"typeof"
+	], // require spaces after these keywords
+	"safeContextKeyword": "_this", // only allow this to be declared as _this
+	"validateLineBreaks": "LF", // enforce a single standard of line break
+	"validateQuoteMarks": "'", // require single quotes
+	"validateIndentation": "\t" // require tab indentation
+}

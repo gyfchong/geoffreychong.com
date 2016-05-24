@@ -1,0 +1,4 @@
+build/*
+source/assets/js/debug*
+source/assets/js/libs*
+source/assets/js/plugins*
