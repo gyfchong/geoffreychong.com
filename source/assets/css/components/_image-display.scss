@@ -7,6 +7,10 @@
 	.c-image-display__item {
 		flex-basis: 100%;
 
+		a {
+			display: block;
+		}
+
 		img {
 			display: block;
 			width: 100%;
