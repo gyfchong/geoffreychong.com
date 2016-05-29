@@ -1,3 +1,14 @@
+// =================
+// Component: Image Display
+// ---
+// <ul class="c-image-display">
+// 		<li class="c-image-display__item"><a href="#"><img src="http://lorempixel.com/1024/768" alt=""></a></li>
+// 		<li class="c-image-display__item"><a href="#"><img src="http://lorempixel.com/1024/768" alt=""></a></li>
+// 		<li class="c-image-display__item"><a href="#"><img src="http://lorempixel.com/1024/768" alt=""></a></li>
+// </ul>
+// =================
+
+
 .c-image-display {
 	@extend %u-wrapper;
 	@extend %u-list-reset;

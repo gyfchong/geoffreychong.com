@@ -150,7 +150,7 @@ gulp.task('server', ['html:copy', 'jsx', 'scss', 'js:head', 'js:vendor', 'js:scr
 	gulp.watch('source/assets/js/head.js', ['js:head']);
 	gulp.watch('source/assets/js/*.js', ['js:vendor']);
 	gulp.watch('source/assets/js/plugins.js', ['js:plugins']);
-	gulp.watch('source/assets/js/script.js', ['js:script']);
+	gulp.watch(['source/assets/js/**/*.js', 'source/assets/js/script.js'], ['js:script']);
 
 	gulp.watch('source/assets/img/*', ['images']);
 

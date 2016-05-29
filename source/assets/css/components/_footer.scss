@@ -1,13 +1,17 @@
 .c-main-footer {
-	// position: fixed;
-	bottom: 0;
+	// margin-top: $base-spacing-unit;
 	width: 100%;
 	min-width: 320px;
+
+	@include bp(0, xxs) {
+		padding: 0;
+	}
 
 	ul {
 		@extend %u-horiz-list;
 		@include font-size(12);
 		font-weight: bold;
+		text-align: center;
 
 		a {
 			padding: $half-spacing-unit/2;

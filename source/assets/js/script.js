@@ -10,7 +10,7 @@ if (typeof console === 'undefined') {
 	console.log = console.error = console.info = console.debug = console.warn = console.trace = console.dir = console.dirxml = console.group = console.groupEnd = console.time = console.timeEnd = console.assert = console.profile = function() {};
 }
 
-(function(NAMESPACE) {
+(function(NAMESPACE, $) {
 
 	'use strict';
 
@@ -49,7 +49,7 @@ if (typeof console === 'undefined') {
 
 	NAMESPACE.INIT = {
 		visual: function() {
-
+			// NAMESPACE.sections.init();
 		},
 		functional: function() {
 
@@ -66,4 +66,4 @@ if (typeof console === 'undefined') {
 		NAMESPACE.init();
 	});
 
-}(GCHONG));
+}(GCHONG, jQuery));
