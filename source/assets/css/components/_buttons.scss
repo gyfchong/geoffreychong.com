@@ -6,7 +6,7 @@
 			margin: 0;
 		}
 
-		@include bp(m) {
+		@include bp(xs) {
 			margin-right: 15px;
 			margin-bottom: 0;
 		}
@@ -26,7 +26,7 @@
 		text-decoration: none;
 	}
 
-	@include bp(m) {
+	@include bp(xs) {
 		display: inline-block;
 	}
 }

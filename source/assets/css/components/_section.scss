@@ -3,7 +3,12 @@
 
 .o-section {
 	display: flex;
-	min-height: 100vh;
+	// min-height: 600px;
+	margin-bottom: $base-spacing-unit;
+
+	@include bp(l) {
+		min-height: 100vh;
+	}
 }
 
 // Provides the wrapper

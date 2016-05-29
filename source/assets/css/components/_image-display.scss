@@ -1,11 +1,21 @@
 .c-image-display {
+	@extend %u-wrapper;
 	@extend %u-list-reset;
-	display: flex;
-	flex-wrap: wrap;
+
+	@include bp(0, m) {
+		padding: 0;
+	}
+
+	@include bp(m) {
+		display: flex;
+		flex-wrap: wrap;
+		height: 100%;
+	}
 }
 
 	.c-image-display__item {
 		flex-basis: 100%;
+		height: 100%;
 
 		a {
 			display: block;
