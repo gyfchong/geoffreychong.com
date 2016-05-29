@@ -49,7 +49,7 @@ if (typeof console === 'undefined') {
 
 	NAMESPACE.INIT = {
 		visual: function() {
-			// NAMESPACE.sections.init();
+			NAMESPACE.easterEggs.advocate();
 		},
 		functional: function() {
 

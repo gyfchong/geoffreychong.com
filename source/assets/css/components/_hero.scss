@@ -34,8 +34,9 @@
 		flex-direction: column;
 		// margin-top: $base-spacing-unit;
 
-		@include bp(m, m) {
-			margin-left: auto;
+		@include bp(s, m) {
+			max-width: 70%;
+			margin-left: 0;
 			margin-right: auto;
 		}
 
@@ -47,7 +48,6 @@
 		}
 
 		h2 {
-
 			@include bp(m) {
 				margin-bottom: 0;
 			}
@@ -62,7 +62,15 @@
 		@extend %u-flex-component;
 		margin: $base-spacing-unit 0 $half-spacing-unit;
 
-		@include bp(xxs) {
+		@include bp(0, m) {
+			display: block;
+		}
+
+		@include bp(m, m) {
+			width: 30%;
+		}
+
+		@include bp(xs, s) {
 			width: 50%;
 		}
 
@@ -76,7 +84,7 @@
 		img {
 			display: block;
 			width: 100%;
-			height: 100%;
+			height: auto;
 		}
 	}
 }
