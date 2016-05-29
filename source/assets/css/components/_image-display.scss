@@ -1,0 +1,22 @@
+.c-image-display {
+	@extend %u-list-reset;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+	.c-image-display__item {
+		flex-basis: 100%;
+
+		a {
+			display: block;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+		}
+
+		&:not(:first-child) {
+			flex-basis: 50%;
+		}
+	}

@@ -102,8 +102,10 @@
 // Utilities
 // =================
 
-%u-circle-radius {
-	border-radius: 999px;
+%u-list-reset{
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 // Turn a component into a flex object
@@ -120,7 +122,7 @@
 
 %u-wrapper {
 	margin: 0 auto;
-	padding: 0 $base-spacing-unit;
+	// padding: 0 $base-spacing-unit;
 	min-width: 320px;
 	max-width: 960px;
 
