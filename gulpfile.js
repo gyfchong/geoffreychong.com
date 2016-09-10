@@ -159,18 +159,4 @@ gulp.task('server', ['html:copy', 'jsx', 'scss', 'js:head', 'js:vendor', 'js:scr
 // Launch server
 gulp.task('default', ['server']);
 
-gulp.task('build', ['html:copy', 'jsx', 'scss', 'js:head', 'js:vendor', 'js:script', 'js:plugins', 'images'], function() {
-
-	gulp.watch('source/*.html', ['html:copy']);
-
-	gulp.watch('source/assets/**/*.scss', ['scss']);
-
-	gulp.watch('source/assets/js/head.js', ['js:head']);
-	gulp.watch('source/assets/js/*.js', ['js:vendor']);
-	gulp.watch('source/assets/js/plugins.js', ['js:plugins']);
-	gulp.watch(['source/assets/js/**/*.js', 'source/assets/js/script.js'], ['js:script']);
-
-	gulp.watch('source/assets/img/*', ['images']);
-
-	gulp.watch('source/**/*.jsx', ['jsx']);
-});
+gulp.task('build', ['html:copy', 'scss', 'js:head', 'js:vendor', 'js:script', 'js:plugins', 'images']);
