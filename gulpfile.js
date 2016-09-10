@@ -12,7 +12,8 @@ var gulp = require('gulp'),
 	cssGlobbing = require('gulp-css-globbing'),
 	jsxTransform = require('gulp-react'),
 	changed = require('gulp-changed'),
-	autoprefixer = require('gulp-autoprefixer');
+	autoprefixer = require('gulp-autoprefixer'),
+	cleanCSS = require('gulp-clean-css');
 
 // Compile SCSS
 // Glob all the required SCSS files into 1 styles.css
@@ -28,9 +29,8 @@ gulp.task('scss', function() {
 				filename_extension: false
 			}
 		}))
-		.pipe(sourcemaps.init())
-			.pipe(sass())
-		.pipe(sourcemaps.write())
+		.pipe(sass())
+		.pipe(cleanCSS())
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
 			cascade: false
@@ -46,11 +46,9 @@ gulp.task('js:head', function() {
 			errorHandler: notify.onError('Error: <%= error.message %>')
 		}))
 		.pipe(changed('build/assets/js'))
-		.pipe(sourcemaps.init())
 		.pipe(concat('head.js'))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(uglify())
-		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('build/assets/js'))
 		.pipe(notify('JS:HEAD: DONE'));
 });
@@ -73,11 +71,9 @@ gulp.task('js:plugins', function() {
 			errorHandler: notify.onError('Error: <%= error.message %>')
 		}))
 		.pipe(changed('build/assets/js'))
-		.pipe(sourcemaps.init())
 		.pipe(concat('plugins.js'))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(uglify())
-		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('build/assets/js'))
 		.pipe(notify('JS:PLUGINS: DONE'));
 });
@@ -89,11 +85,9 @@ gulp.task('js:script', function() {
 			errorHandler: notify.onError('Error: <%= error.message %>')
 		}))
 		.pipe(changed('build/assets/js'))
-		.pipe(sourcemaps.init())
 		.pipe(concat('script.js'))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(uglify())
-		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('build/assets/js'))
 		.pipe(notify('JS:SCRIPT: DONE'));
 });

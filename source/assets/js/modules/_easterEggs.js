@@ -21,9 +21,9 @@
 					swapString = $el.data().eeSwap,
 					swapObject = { image: 'assets/img/' + swapString + '.jpg', text: swapString };
 
-					$el
-						.on('mouseenter', function(){ swapTo($el, swapObject) })
-						.on('mouseleave', function() { swapTo($el, originalObject) });
+				$el
+					.on('mouseenter', function() { swapTo($el, swapObject) })
+					.on('mouseleave', function() { swapTo($el, originalObject) });
 			});
 
 			var swapTo = function($el,object) {

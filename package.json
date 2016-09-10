@@ -1,36 +1,37 @@
 {
-	"name": "Portfolio",
-	"description": "Geoffrey Chong's portfolio",
-	"author": {
-		"name": "Geoffrey Chong",
-		"url": "http://geoffreychong.com"
-	},
-	"version": "1.0.0",
-	"repository": {
-		"type": "git",
-		"url": "https://bitbucket.org/gyfchong/portfolio"
-	},
-	"devDependencies": {
-		"amd-optimize": "^0.4.3",
-		"browser-sync": "^2.5.3",
-		"gulp": "^3.9.0",
-		"gulp-autoprefixer": "^2.1.0",
-		"gulp-changed": "^1.2.1",
-		"gulp-concat": "^2.5.2",
-		"gulp-css-globbing": "^0.1.7",
-		"gulp-ejs": "^1.1.0",
-		"gulp-filter": "^2.0.2",
-		"gulp-image-optimization": "^0.1.3",
-		"gulp-jshint": "^1.10.0",
-		"gulp-notify": "^2.2.0",
-		"gulp-plumber": "^1.0.0",
-		"gulp-rename": "^1.2.2",
-		"gulp-rimraf": "^0.1.1",
-		"gulp-sass": "^2.1.0",
-		"gulp-sourcemaps": "^1.5.1",
-		"gulp-uglify": "^1.1.0",
-		"gulp-util": "^3.0.4",
-		"jshint-stylish": "^1.0.1"
-	},
-	"license": "MIT"
+  "name": "Portfolio",
+  "description": "Geoffrey Chong's portfolio",
+  "author": {
+    "name": "Geoffrey Chong",
+    "url": "http://geoffreychong.com"
+  },
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/gyfchong/portfolio"
+  },
+  "devDependencies": {
+    "amd-optimize": "^0.4.3",
+    "browser-sync": "^2.5.3",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-changed": "^1.2.1",
+    "gulp-clean-css": "^2.0.9",
+    "gulp-concat": "^2.5.2",
+    "gulp-css-globbing": "^0.1.7",
+    "gulp-ejs": "^1.1.0",
+    "gulp-filter": "^2.0.2",
+    "gulp-image-optimization": "^0.1.3",
+    "gulp-jshint": "^1.10.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rimraf": "^0.1.1",
+    "gulp-sass": "^2.1.0",
+    "gulp-sourcemaps": "^1.5.1",
+    "gulp-uglify": "^1.1.0",
+    "gulp-util": "^3.0.4",
+    "jshint-stylish": "^1.0.1"
+  },
+  "license": "MIT"
 }
