@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/gyfchong
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://geoffreychong.com
+  * I am gyfchong (https://keybase.io/gyfchong) on keybase.
+  * I have a public key with fingerprint 730E 2253 C57E BEC5 47E8  C2D8 6A00 3F15 146A 11AC
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010101df9356a09c48bbe8f0fc2bcc2582ea0e16ba216d45f31216fbfa4441e0da350a",
+            "fingerprint": "730e2253c57ebec547e8c2d86a003f15146a11ac",
+            "host": "keybase.io",
+            "key_id": "6a003f15146a11ac",
+            "kid": "010101df9356a09c48bbe8f0fc2bcc2582ea0e16ba216d45f31216fbfa4441e0da350a",
+            "uid": "f78346255a45eb3134ea9252583d5c19",
+            "username": "gyfchong"
+        },
+        "service": {
+            "hostname": "geoffreychong.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1486469128,
+    "expire_in": 157680000,
+    "prev": "d98f7b66f8657b7e8848963f1a6f2cf588c6e9d80c17afa929b6eea00aef425d",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.62
+Comment: https://keybase.io/crypto
+
+yMIpAnicrVJbSBRRGN61TF01BR96WCqYsAyXmjMzZy4bCl3wIaSCJMsuy5kz56yD
+urPNjDcs6rEkDDWEQIUIfAhjI0x9CNq1SOhqGdgFK0LNrkZt1ENUZ6Teeuych3PO
+f77v+///47+Rv8QX8JcV+BJfaM0F/+1Ub6Nv79nR7DZOt4xWLtzG1ZHFg9QbxHEj
+dabBhTkeeNugmghlxGtYUnWdqJSnWNAxFqAqEMQTIOtIALIhQSoCdqE6RZIkAcIb
+SIQ84kIcNWNRYsdtM+YyWUXkiSBAEUOF6ARDSSEqFgyV5eBFCiCQZAQAwoxYazke
+gxWnI4dsMC0WY4/IYnn/wP/nuhsX5aiiipIsQIgkSHQRiBJBmgCZjmhADDQP6BA7
+hhoIQ0dbKa61YlHuaIhj0SYTE89Yr5O/CGJRapPWRdgGbDUwgbhtuRa26tl3revG
+nbBHd1vjHr6Z6JE/ShHdjBnMTMZoIrZjWjEuDBgSu6YnDSRVlmQNCGqIIy1x0yYR
+00NARVZ5trw8pIlJGppKFV2WqSpDRWf+q5KqycxMJFMBU6iqWCaaofIYKIiybjVd
+Jsw0HhEqCdDgvN4OxywuLLEyUZRJOmY0htxGm3BHx5IHlvr8Ad+yzAxvyHyBnMK/
+o6fNZP0E4e5QsnNVYoE+THT03Ore2N4wmor/GKo/dmc8U3m8bH728+z8ULDKfp1T
+qk3crMgv/jxyZOpc+2g6OHd8qgNVOgsvqlYvD84Uf8rIamkL9q/9GAZ9l/ofzV3M
+Xv69+Mq9QM/AcE7iQ/krd6gyKdk3Sjevv/vk6q/qcf+mLif9LE8o3+lrHtk6c/B5
+i//a3Wfdobz39xdWyJ1k/HRN8njNpF1bHc293L+r903fgzXbC8reTm3pKtlXWDH4
+7etgej7YGCioTA3vOZg6MVA0vT83mI6kyhJPM1vyHl+f33E+Pna9qOeM++7k7vS6
+wYbuQ/vLp0t+Dk1O+1f+2jZ45eWpCe43ec9H8A==
+=UnWK
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/gyfchong
+
+==================================================================
