@@ -131,6 +131,13 @@ gulp.task('html:copy', function() {
 		.pipe(notify('HTML COPY: DONE'));
 });
 
+gulp.task('txt:copy', function() {
+	gulp.src('source/*.txt')
+		.pipe(changed('build/'))
+		.pipe(gulp.dest('build/'))
+		.pipe(notify('TEXT COPY: DONE'));
+});
+
 // Start Browsersync server and watch file changes
 gulp.task('server', ['html:copy', 'jsx', 'scss', 'js:head', 'js:vendor', 'js:script', 'js:plugins', 'images'], function() {
 	browserSync({
@@ -159,4 +166,4 @@ gulp.task('server', ['html:copy', 'jsx', 'scss', 'js:head', 'js:vendor', 'js:scr
 // Launch server
 gulp.task('default', ['server']);
 
-gulp.task('build', ['html:copy', 'scss', 'js:head', 'js:vendor', 'js:script', 'js:plugins', 'images']);
+gulp.task('build', ['html:copy', 'txt:copy', 'scss', 'js:head', 'js:vendor', 'js:script', 'js:plugins', 'images']);
