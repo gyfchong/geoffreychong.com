@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 	reload = browserSync.reload,
 	plumber = require('gulp-plumber'),
 	notify = require('gulp-notify'),
-	imageop = require('gulp-image-optimization'),
+	// imageop = require('gulp-image-optimization'),
 	cssGlobbing = require('gulp-css-globbing'),
 	jsxTransform = require('gulp-react'),
 	changed = require('gulp-changed'),
@@ -93,22 +93,22 @@ gulp.task('js:script', function() {
 });
 
 // Optimise images
-gulp.task('images', function(cb) {
-	gulp.src('source/assets/img/*')
-		.pipe(plumber({
-			errorHandler: notify.onError('Error: <%= error.message %>')
-		}))
-		.pipe(changed('build/assets/img'))
-		.pipe(imageop({
-			optimizationLevel: 5,
-			progressive: true,
-			interlaced: true
-		}))
-		.pipe(gulp.dest('build/assets/img'))
-		.on('end', cb)
-		.on('error', cb)
-		.pipe(notify('IMAGE OPTIMISATION: DONE'));
-});
+// gulp.task('images', function(cb) {
+// 	gulp.src('source/assets/img/*')
+// 		.pipe(plumber({
+// 			errorHandler: notify.onError('Error: <%= error.message %>')
+// 		}))
+// 		.pipe(changed('build/assets/img'))
+// 		.pipe(imageop({
+// 			optimizationLevel: 5,
+// 			progressive: true,
+// 			interlaced: true
+// 		}))
+// 		.pipe(gulp.dest('build/assets/img'))
+// 		.on('end', cb)
+// 		.on('error', cb)
+// 		.pipe(notify('IMAGE OPTIMISATION: DONE'));
+// });
 
 gulp.task('jsx', function() {
 	return gulp.src('source/**/*.jsx')
@@ -138,8 +138,18 @@ gulp.task('txt:copy', function() {
 		.pipe(notify('TEXT COPY: DONE'));
 });
 
+critical.generate({
+    inline: true,
+    base: 'test/',
+    src: 'index.html',
+    dest: 'index-critical.html',
+    minify: true,
+    width: 1300,
+    height: 900
+});
+
 // Start Browsersync server and watch file changes
-gulp.task('server', ['html:copy', 'jsx', 'scss', 'js:head', 'js:vendor', 'js:script', 'js:plugins', 'images'], function() {
+gulp.task('server', ['html:copy', 'jsx', 'scss', 'js:head', 'js:vendor', 'js:script', 'js:plugins'], function() {
 	browserSync({
 		server: 'build'
 	});
@@ -153,17 +163,17 @@ gulp.task('server', ['html:copy', 'jsx', 'scss', 'js:head', 'js:vendor', 'js:scr
 	gulp.watch('source/assets/js/plugins.js', ['js:plugins']);
 	gulp.watch(['source/assets/js/**/*.js', 'source/assets/js/script.js'], ['js:script']);
 
-	gulp.watch('source/assets/img/*', ['images']);
+	// gulp.watch('source/assets/img/*', ['images']);
 
 	gulp.watch('source/**/*.jsx', ['jsx']);
 
 	gulp.watch('build/assets/css/*.css').on('change', reload);
 	gulp.watch('build/assets/js/*.js').on('change', reload);
 	gulp.watch('build/*.html').on('change', reload);
-	gulp.watch('build/assets/img/*').on('change', reload);
+	// gulp.watch('build/assets/img/*').on('change', reload);
 });
 
 // Launch server
 gulp.task('default', ['server']);
 
-gulp.task('build', ['html:copy', 'txt:copy', 'scss', 'js:head', 'js:vendor', 'js:script', 'js:plugins', 'images']);
+gulp.task('build', ['html:copy', 'txt:copy', 'scss', 'js:head', 'js:vendor', 'js:script', 'js:plugins']);
