@@ -10,6 +10,10 @@
     "type": "git",
     "url": "https://bitbucket.org/gyfchong/portfolio"
   },
+	"browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "devDependencies": {
     "amd-optimize": "^0.6.1",
     "browser-sync": "^2.15.0",
