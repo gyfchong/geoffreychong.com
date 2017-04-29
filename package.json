@@ -35,17 +35,14 @@
     "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.4",
+    "gulp-replace": "^0.5.4",
     "jshint-stylish": "^2.2.1",
-    "stream-browserify": "^2.0.1"
+    "stream-browserify": "^2.0.1",
+      "fs": "^0.0.1-security",
+      "jshint": "2.x",
+      "phantomjs-prebuilt": "^2.1.14"
   },
   "license": "MIT",
   "dependencies": {
-    "critical": "^0.8.4",
-    "fs": "^0.0.1-security",
-    "gulp-critical-css": "^1.0.1",
-    "gulp-replace": "^0.5.4",
-    "jpegtran-bin": "^3.2.0",
-    "jshint": "2.x",
-    "phantomjs-prebuilt": "^2.1.14"
   }
 }

@@ -14,7 +14,6 @@ const jsxTransform = require('gulp-react');
 const changed = require('gulp-changed');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
-const critical = require('critical');
 const replace = require('gulp-replace');
 const fs = require('fs');
 
