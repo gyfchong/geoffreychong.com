@@ -18,12 +18,10 @@ html, body {
 
 a {
 	color: $hex-link;
-	text-decoration: none;
 	transition: all .3s ease;
 
 	&:hover {
 		color: $hex-link-hover;
-		text-decoration: underline;
 		transition: all .3s ease;
 	}
 }
