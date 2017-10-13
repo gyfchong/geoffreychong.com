@@ -29,30 +29,6 @@ gulp.task('scss', function() {
 	})).pipe(sass()).pipe(cleanCSS()).pipe(autoprefixer({cascade: false})).pipe(gulp.dest('build/assets/css')).pipe(notify('SCSS: DONE'));
 });
 
-// Compile JS:Head
-gulp.task('js:head', function() {
-	return gulp.src(['source/assets/js/head.js', 'source/assets/js/head/*.js']).pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')})).pipe(changed('build/assets/js')).pipe(concat('head.js')).pipe(rename({suffix: '.min'})).pipe(uglify()).pipe(gulp.dest('build/assets/js')).pipe(notify('JS:HEAD: DONE'));
-});
-
-// Compile JS:vendor
-gulp.task('js:vendor', function() {
-	return gulp.src('source/assets/js/vendor/*.js').pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')})).pipe(changed('build/assets/js')).pipe(gulp.dest('build/assets/js/vendor/')).pipe(notify('JS:VENDOR: DONE'));
-});
-
-// Compile JS:plugins
-gulp.task('js:plugins', function() {
-	return gulp.src('source/assets/js/plugins/*.js').pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')})).pipe(changed('build/assets/js')).pipe(concat('plugins.js')).pipe(rename({suffix: '.min'})).pipe(uglify()).pipe(gulp.dest('build/assets/js')).pipe(notify('JS:PLUGINS: DONE'));
-});
-
-// Javascript Process
-gulp.task('js:script', function() {
-	return gulp.src(['source/assets/js/**/*.js', 'source/assets/js/script.js', '!source/assets/js/head/*.js', '!source/assets/js/vendor/*.js', '!source/assets/js/plugins/*.js']).pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')})).pipe(changed('build/assets/js')).pipe(concat('script.js')).pipe(rename({suffix: '.min'})).pipe(uglify()).pipe(gulp.dest('build/assets/js')).pipe(notify('JS:SCRIPT: DONE'));
-});
-
-gulp.task('jsx', function() {
-	return gulp.src('source/**/*.jsx').pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')})).pipe(sourcemaps.init()).pipe(concat('app.js')).pipe(rename({suffix: '.min'})).pipe(jsxTransform()).pipe(sourcemaps.write()).pipe(gulp.dest('build/assets/js')).pipe(notify('JSX TRANSFORM: DONE'));
-});
-
 gulp.task('html:copy', function() {
 	gulp.src('source/*.html').pipe(changed('build/')).pipe(gulp.dest('build/')).pipe(notify('HTML COPY: DONE'));
 });
@@ -78,19 +54,8 @@ gulp.task('server', [
 
 	gulp.watch('source/assets/**/*.scss', ['scss']);
 
-	// gulp.watch('source/assets/js/head.js', ['js:head']);
-	// gulp.watch('source/assets/js/*.js', ['js:vendor']);
-	// gulp.watch('source/assets/js/plugins.js', ['js:plugins']);
-	// gulp.watch(['source/assets/js/**/*.js', 'source/assets/js/script.js'], ['js:script']);
-
-	// gulp.watch('source/assets/img/*', ['images']);
-
-	// gulp.watch('source/**/*.jsx', ['jsx']);
-
 	gulp.watch('build/assets/css/*.css').on('change', reload);
-	// gulp.watch('build/assets/js/*.js').on('change', reload);
 	gulp.watch('build/*.html').on('change', reload);
-	// gulp.watch('build/assets/img/*').on('change', reload);
 });
 
 // Launch server
