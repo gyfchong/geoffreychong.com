@@ -13,7 +13,8 @@
   },
   "scripts": {
     "start": "rm -rf dist && parcel src/*.html",
-    "build": "rm -rf dist && parcel build src/*.html --no-source-maps",
+    "build": "rm -rf dist && parcel build src/*.html --no-source-maps && yarn run copyTxtToDist",
+    "copyTxtToDist": "cp src/robots.txt dist/ && cp src/keybase.txt dist/",
     "report": "lighthouse http://localhost:1234 --output html --output-path ./report.html --view"
   },
   "dependencies": {
