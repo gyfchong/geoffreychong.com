@@ -1,47 +1,30 @@
 {
-  "name": "Portfolio",
+  "name": "gyfchong-portfolio",
   "description": "Geoffrey Chong's portfolio",
   "author": {
     "name": "Geoffrey Chong",
     "url": "http://geoffreychong.com"
   },
+  "license": "MIT",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/gyfchong/portfolio"
+    "url": "https://github.com/gyfchong/portfolio"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
+  "scripts": {
+    "start": "rm -rf dist && parcel src/*.html",
+    "build": "rm -rf dist && parcel build src/*.html --no-source-maps",
+    "report": "lighthouse http://localhost:1234 --output html --output-path ./report.html --view"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.6",
+    "normalize.css": "^8.0.1",
+    "reset.css": "^2.0.2"
+  },
   "devDependencies": {
-    "amd-optimize": "^0.6.1",
-    "browser-sync": "^2.15.0",
-    "fs": "^0.0.1-security",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-changed": "^2.0.0",
-    "gulp-clean-css": "^3.0.3",
-    "gulp-concat": "^2.5.2",
-    "gulp-css-globbing": "^0.1.7",
-    "gulp-ejs": "^3.0.0",
-    "gulp-filter": "^5.0.0",
-    "gulp-jshint": "^2.0.1",
-    "gulp-notify": "^3.0.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-react": "^3.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.5.4",
-    "gulp-rimraf": "^0.2.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.4.1",
-    "gulp-uglify": "^2.0.0",
-    "gulp-util": "^3.0.4",
-    "jshint": "2.x",
-    "jshint-stylish": "^2.2.1",
-    "phantomjs-prebuilt": "^2.1.14",
-    "stream-browserify": "^2.0.1"
-  },
-  "license": "MIT",
-  "dependencies": {}
+    "cssnano": "^4.1.10",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-imagemin": "^4.0.1",
+    "postcss-import": "^12.0.1"
+  }
 }

@@ -1,0 +1,141 @@
+@import "normalize.css";
+@import "reset.css";
+
+body {
+  color: #444;
+  font-family: 'Noto Sans', serif;
+  font-size: 16px;
+}
+
+p {
+  margin-bottom: 15px;
+  line-height: 1.875;
+}
+
+a {
+  color: #0f6a95;
+  transition: all .3s ease;
+}
+
+a:hover {
+  color: #274a83;
+  transition: all .3s ease;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100vh;
+}
+
+.content {
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.biography {
+  display: grid;
+  grid-template-columns: minmax(150px, 400px) 1fr;
+  grid-column-gap: 50px;
+}
+
+.headshot {
+  display: flex;
+  align-items: center;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+  .tagline {
+    margin-bottom: 25px;
+    max-width: 500px;
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.tiny-heading {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.large-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+}
+
+.footer__link {
+  display: block;
+  padding: 10px 15px;
+  font-size: 0.75em;
+  font-weight: 700;
+  color: #495363;
+}
+
+.footer__link:hover {
+  color: #0f6a95;
+}
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+ .sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
