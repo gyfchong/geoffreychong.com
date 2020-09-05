@@ -57,14 +57,16 @@
 			<section class="biography">
 				<div class="headshot">
 					<picture>
-						<source srcset="img/me.webp" media="(prefers-color-scheme: dark)">
-						<img src="img/me.webp" alt="A portrait of Geoffrey Chong" rel="preload" as="image" sizes="400px">
+						<img src="img/me_400.webp" alt="A portrait of Geoffrey Chong" rel="preload" as="image"
+							srcset="img/me_160.webp 160w, img/me_400.webp 400w" sizes="(max-width: 768px) 160px, 400px">
 					</picture>
 				</div>
 				<div class="about-me">
-					<h2 class="tiny-heading">Introduction</h2>
-					<p class="tagline"><span class="large-text">Hi, I&rsquo;m Geoff,</span><br />Design Engineer &amp; best
-						practice advocate.</p>
+					<div class="headline">
+						<h1 class="tiny-heading">Introduction <span class="sr-only">to Geoffrey Chong</span></h1>
+						<p class="tagline"><span class="large-text">Hi, I&rsquo;m Geoff.</span><br />Design Engineer &amp; best
+							practice advocate.</p>
+					</div>
 					<p>
 						<strong>I currently work</strong> for <a rel="noopener" href="http://ubank.com.au"
 							target="_blank">UBank.com.au</a>, helping

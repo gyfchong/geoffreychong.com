@@ -12,20 +12,21 @@
     "url": "https://github.com/gyfchong/portfolio"
   },
   "scripts": {
-    "start": "rm -rf dist && parcel src/*.html",
+    "start": "rm -rf dist && parcel src/*.html  --public-url /",
     "build": "rm -rf dist && parcel build src/*.html --public-url / --no-source-maps && yarn run copyTxtToDist",
     "copyTxtToDist": "cp src/robots.txt dist/",
     "report": "lighthouse http://localhost:1234 --output html --output-path ./report.html --view"
   },
   "dependencies": {
-    "autoprefixer": "^9.8.6",
     "normalize.css": "^8.0.1",
     "reset.css": "^2.0.2"
   },
   "devDependencies": {
+    "autoprefixer": "^9.8.6",
     "cssnano": "^4.1.10",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-imagemin": "^4.0.1",
-    "postcss-import": "^12.0.1"
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.3"
   }
 }

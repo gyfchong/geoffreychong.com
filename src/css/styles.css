@@ -1,35 +1,18 @@
 @import "normalize.css";
 @import "reset.css";
 
-body {
-  color: #444;
-  font-family: 'Noto Sans', serif;
-  font-size: 16px;
-}
-
-p {
-  margin-bottom: 15px;
-  line-height: 1.875;
-}
-
-a {
-  color: #0f6a95;
-  transition: all .3s ease;
-}
-
-a:hover {
-  color: #274a83;
-  transition: all .3s ease;
-}
-
-strong {
-  font-weight: 700;
-}
+@import "./base.css";
 
 .wrapper {
   display: grid;
   grid-template-rows: 1fr auto;
-  height: 100vh;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 0 20px;
+
+  @media (max-width: 768px) {
+    max-width: 500px;
+  }
 }
 
 .content {
@@ -40,32 +23,66 @@ strong {
 }
 
 .biography {
-  display: grid;
-  grid-template-columns: minmax(150px, 400px) 1fr;
-  grid-column-gap: 50px;
+  @media (min-width: 769px) {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: minmax(150px, 400px) 1fr;
+  }
 }
 
 .headshot {
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 30px;
+  }
+
+  picture {
+    @media (max-width: 768px) {
+      margin: 0 auto;
+    }
+  }
+
+  img {
+    @media (max-width: 768px) {
+      border-radius: 100%;
+    }
+  }
 }
 
 .about-me {
   display: flex;
   flex-direction: column;
   align-self: center;
+  justify-content: center;
 }
 
+  .headline {
+    margin-bottom: 15px;
+    text-align: center;
+
+    @media (min-width: 769px) {
+      text-align: left;
+    }
+  }
+
   .tagline {
-    margin-bottom: 25px;
+    margin: 0 auto 25px;
     max-width: 500px;
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 1.4;
+
+    @media (min-width: 769px) {
+      margin: 0;
+      font-size: 2rem;
+    }
   }
 
 .footer {
   display: flex;
   justify-content: center;
+  margin-top: 25px;
 }
 
 .tiny-heading {
@@ -87,7 +104,10 @@ strong {
 .footer-links {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 10px;
+
+  @media (min-width: 769px) {
+    grid-column-gap: 10px;
+  }
 }
 
 .footer__link {

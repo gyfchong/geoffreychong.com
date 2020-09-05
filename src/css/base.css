@@ -1,0 +1,34 @@
+
+body {
+  box-sizing: border-box;
+  color: #444;
+  font-family: 'Noto Sans', serif;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+
+p {
+  line-height: 1.875;
+
+  &:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+}
+
+a {
+  color: #0f6a95;
+  transition: all .3s ease;
+}
+
+a:hover {
+  color: #274a83;
+  transition: all .3s ease;
+}
+
+strong {
+  font-weight: 700;
+}
