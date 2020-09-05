@@ -1,9 +1,32 @@
 
+html {
+	--body-colour: #444;
+	--link-colour: #0f6a95;
+	--background-colour: #fff;
+
+	@media (prefers-color-scheme: dark) {
+		--body-colour: #fff;
+		--link-colour: #739ad9;
+		--background-colour: #131313;
+	}
+
+	&.dark-mode {
+		--body-colour: #fff;
+		--link-colour: #739ad9;
+		--background-colour: #131313;
+	}
+}
+
+
 body {
   box-sizing: border-box;
   color: #444;
-  font-family: 'Noto Sans', serif;
+  font-family: 'Noto Sans', system-ui, -apple-system, BlinkMacSystemFont, serif;
   font-size: 16px;
+  font-weight: 400;
+	font-style: normal;
+	color: var(--body-colour);
+	background-color: var(--background-colour);
 }
 
 * {
@@ -20,7 +43,7 @@ p {
 }
 
 a {
-  color: #0f6a95;
+  color: var(--link-colour);
   transition: all .3s ease;
 }
 

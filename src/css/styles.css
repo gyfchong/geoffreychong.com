@@ -115,12 +115,8 @@
   padding: 10px 15px;
   font-size: 0.75em;
   font-weight: 700;
-  color: #495363;
 }
 
-.footer__link:hover {
-  color: #0f6a95;
-}
 /*
  * Hide only visually, but have it available for screen readers:
  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
