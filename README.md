@@ -1,2 +1,2 @@
 # portfolio
-geoffreychong.com
+[geoffreychong.com](https://geoffreychong.com)
