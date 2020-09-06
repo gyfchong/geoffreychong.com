@@ -109,7 +109,7 @@
     background-color: var(--link-colour-hover);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 325px) {
     display: block;
     padding: 15px 20px;
     text-align: center;
