@@ -39,10 +39,7 @@ body {
 
 p {
   line-height: 1.875;
-
-  &:not(:last-of-type) {
-    margin-bottom: 15px;
-  }
+  margin-bottom: 15px;
 }
 
 a {

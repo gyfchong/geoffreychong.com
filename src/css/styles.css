@@ -54,7 +54,6 @@
 .about-me {
   display: flex;
   flex-direction: column;
-  align-self: center;
   justify-content: center;
 }
 
@@ -93,6 +92,28 @@
 .large-text {
   font-size: 2.5rem;
   font-weight: 700;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 15px;
+  color: #fff;
+  font-weight: 700;
+  color: #092757;
+  background-color: var(--link-colour);
+  border-radius: 3px;
+  text-decoration: none;
+
+  &:hover {
+    color: #000;
+    background-color: var(--link-colour-hover);
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+    padding: 15px 20px;
+    text-align: center;
+  }
 }
 
 .list {
