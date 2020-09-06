@@ -1,18 +1,21 @@
 
 html {
 	--body-colour: #444;
-	--link-colour: #0f6a95;
+	--link-colour: #4973b7;
+	--link-colour-hover: #b7398c;
 	--background-colour: #fff;
 
 	@media (prefers-color-scheme: dark) {
 		--body-colour: #fff;
 		--link-colour: #739ad9;
+	  --link-colour-hover: #ffabe2;
 		--background-colour: #131313;
 	}
 
 	&.dark-mode {
 		--body-colour: #fff;
 		--link-colour: #739ad9;
+	  --link-colour-hover: #ffabe2;
 		--background-colour: #131313;
 	}
 }
@@ -48,7 +51,7 @@ a {
 }
 
 a:hover {
-  color: #274a83;
+  color: var(--link-colour-hover);
   transition: all .3s ease;
 }
 
