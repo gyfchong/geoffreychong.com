@@ -1,13 +1,19 @@
 name: "Deploy Preview"
 
 on:
-  push:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
 
 concurrency: preview-${{ github.ref }}
 
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
+    if: github.event.state == 'success' && github.event.context == 'Branch preview'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
