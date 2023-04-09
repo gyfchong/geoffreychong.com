@@ -25,6 +25,7 @@
     "autoprefixer": "^9.8.6",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-imagemin": "^4.0.1",
+    "postcss": "^8.4.21",
     "postcss-import": "^15.0.0",
     "postcss-nested": "^6.0.0"
   }
