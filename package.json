@@ -26,6 +26,6 @@
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-imagemin": "^4.0.1",
     "postcss-import": "^15.0.0",
-    "postcss-nested": "^4.2.3"
+    "postcss-nested": "^6.0.0"
   }
 }
