@@ -12,12 +12,14 @@
     "url": "https://github.com/gyfchong/portfolio"
   },
   "scripts": {
-    "start": "rm -rf dist && parcel src/*.html",
-    "build": "rm -rf dist && parcel build src/*.html --no-source-maps && yarn run copyTxtToDist",
+    "start": "pnpm run clean && parcel src/*.html",
+    "build": "pnpm run clean && parcel build src/*.html --no-source-maps && yarn run copyTxtToDist",
+    "clean": "rm -rf dist",
     "copyTxtToDist": "cp src/robots.txt dist/",
     "report": "lighthouse http://localhost:1234 --output html --output-path ./report.html --view"
   },
   "dependencies": {
+    "@parcel/core": "^2.8.3",
     "normalize.css": "^8.0.1",
     "reset.css": "^2.0.2"
   },
@@ -28,7 +30,7 @@
     "parcel": "^2.8.3",
     "parcel-plugin-imagemin": "^4.0.2",
     "postcss": "^8.4.21",
-    "postcss-import": "^15.0.0",
-    "postcss-nested": "^6.0.0"
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.1"
   }
 }
