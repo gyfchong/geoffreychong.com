@@ -57,26 +57,26 @@
   justify-content: center;
 }
 
-  .headline {
-    margin-bottom: 15px;
-    text-align: center;
+.headline {
+  margin-bottom: 15px;
+  text-align: center;
 
-    @media (min-width: 769px) {
-      text-align: left;
-    }
+  @media (min-width: 769px) {
+    text-align: left;
   }
+}
 
-  .tagline {
-    margin: 0 auto 25px;
-    max-width: 500px;
-    font-size: 1.6rem;
-    line-height: 1.4;
+.tagline {
+  margin: 0 auto 25px;
+  max-width: 500px;
+  font-size: 1.6rem;
+  line-height: 1.4;
 
-    @media (min-width: 769px) {
-      margin: 0;
-      font-size: 2rem;
-    }
+  @media (min-width: 769px) {
+    margin: 0;
+    font-size: 2rem;
   }
+}
 
 .footer {
   display: flex;
@@ -147,7 +147,7 @@
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
 
- .sr-only {
+.sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
