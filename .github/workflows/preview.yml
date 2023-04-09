@@ -1,23 +1,22 @@
-name: "Deploy Preview"
-
-on:
-  push:
-
+# .github/workflows/preview.yml
+name: Deploy PR previews
 concurrency: preview-${{ github.ref }}
-
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Install and Build
-        run: |
-          yarn install
-          yarn run build
-
-      - name: Deploy preview
-        uses: rossjrw/pr-preview-action@v1
+      - uses: actions/checkout@v3
+      - run: yarn install && yarn run build
+      - uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./build/
+          source-dir: .
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          action: auto
