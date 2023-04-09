@@ -22,7 +22,7 @@
     "reset.css": "^2.0.2"
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^10.0.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-imagemin": "^4.0.1",
     "postcss": "^8.4.21",
