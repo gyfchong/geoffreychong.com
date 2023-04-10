@@ -1,5 +1,5 @@
 # .github/workflows/preview.yml
-name: Deploy PR previews
+name: Deploy
 concurrency: preview-${{ github.ref }}
 on:
   pull_request:
@@ -9,11 +9,15 @@ on:
       - synchronize
       - closed
 jobs:
-  deploy-preview:
+  pr-preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: yarn install && yarn run build
+      - name: Install dependencies
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: "8.1.1"
+          run_install: true
       - uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: .
