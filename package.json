@@ -11,13 +11,16 @@
     "type": "git",
     "url": "https://github.com/gyfchong/portfolio"
   },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8"
+  },
   "scripts": {
     "start": "pnpm run clean && parcel src/*.html",
     "build": "pnpm run clean && parcel build src/*.html --no-source-maps && yarn run copyTxtToDist",
     "clean": "rm -rf dist",
     "copyTxtToDist": "cp src/robots.txt dist/",
-    "report": "lighthouse http://localhost:1234 --output html --output-path ./report.html --view",
-    "ci:setup": "pnpm install && pnpm build"
+    "report": "lighthouse http://localhost:1234 --output html --output-path ./report.html --view"
   },
   "dependencies": {
     "@parcel/core": "^2.8.3",
