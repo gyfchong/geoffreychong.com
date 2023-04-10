@@ -18,7 +18,6 @@ jobs:
         with:
           version: "8.1.1"
           run_install: true
-      - run: pnpm ci:setup
       - uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: .
