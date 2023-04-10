@@ -1,5 +1,5 @@
 # .github/workflows/preview.yml
-name: Deploy
+name: "Deploy: Preview"
 concurrency: preview-${{ github.ref }}
 on:
   pull_request:
