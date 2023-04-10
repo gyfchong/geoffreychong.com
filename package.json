@@ -12,9 +12,9 @@
     "url": "https://github.com/gyfchong/portfolio"
   },
   "engines": {
-    "node": ">=18",
-    "pnpm": ">=8"
+    "node": ">=18"
   },
+  "packageManager": "pnpm@8.2.0",
   "scripts": {
     "start": "pnpm run clean && parcel src/*.html",
     "build": "pnpm run clean && parcel build src/*.html --no-source-maps && yarn run copyTxtToDist",
