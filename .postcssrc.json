@@ -2,6 +2,7 @@
   "modules": false,
   "plugins": {
     "postcss-import": {},
-    "postcss-nested": {}
+    "postcss-nesting": {},
+    "cssnano": {}
   }
 }

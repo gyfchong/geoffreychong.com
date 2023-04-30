@@ -33,21 +33,16 @@
 .headshot {
   display: flex;
   align-items: center;
+  justify-content: center;
 
   @media (max-width: 768px) {
     padding: 30px;
   }
+}
 
-  picture {
-    @media (max-width: 768px) {
-      margin: 0 auto;
-    }
-  }
-
-  img {
-    @media (max-width: 768px) {
-      border-radius: 100%;
-    }
+.profile-image {
+  @media (max-width: 768px) {
+    border-radius: 100%;
   }
 }
 

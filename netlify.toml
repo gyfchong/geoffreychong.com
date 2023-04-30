@@ -1,3 +1,3 @@
 [build]
   command = "pnpm build"
-  dir = "_site"
+  publish = "_site"
