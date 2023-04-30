@@ -16,25 +16,22 @@
   },
   "packageManager": "pnpm@8.3.1",
   "scripts": {
-    "start": "parcel src/*.html",
-    "build": "pnpm clean && parcel build src/*.html --no-source-maps && pnpm copyTxtToDist",
-    "clean": "rm -rf dist",
-    "copyTxtToDist": "cp src/robots.txt dist/",
-    "report": "lighthouse http://localhost:1234 --output html --output-path ./report.html --view"
+    "start": "npx @11ty/eleventy --serve",
+    "build": "rimraf _site && npx @11ty/eleventy && pnpm build:css",
+    "build:css": "postcss styles/styles.css -d _site"
   },
   "dependencies": {
-    "@parcel/core": "^2.8.3",
     "normalize.css": "^8.0.1",
     "reset.css": "^2.0.2"
   },
   "devDependencies": {
-    "@parcel/packager-raw-url": "2.8.3",
-    "@parcel/transformer-jsonld": "2.8.3",
     "autoprefixer": "^10.4.14",
     "parcel": "^2.8.3",
     "parcel-plugin-imagemin": "^4.0.2",
     "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
-    "postcss-nested": "^6.0.1"
+    "postcss-nested": "^6.0.1",
+    "rimraf": "^5.0.0"
   }
 }
