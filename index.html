@@ -52,17 +52,20 @@
       as="style"
     />
 
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-E4KCM409ZK"
+    ></script>
     <script>
-      window.ga =
-        window.ga ||
-        function () {
-          (ga.q = ga.q || []).push(arguments);
-        };
-      ga.l = +new Date();
-      ga("create", "UA-39376612-1", "auto");
-      ga("send", "pageview");
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-E4KCM409ZK");
     </script>
-    <script async src="https://www.google-analytics.com/analytics.js"></script>
   </head>
 
   <body>
@@ -96,6 +99,8 @@
                 srcset="images/me_160.webp 160w, images/me_400.webp 400w"
                 sizes="(max-width: 768px) 160px, 400px"
                 class="profile-image"
+                width="400"
+                height="400"
               />
             </picture>
           </div>
