@@ -11,9 +11,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 30px;
+    min-height: 160px;
 
-    @media (max-width: 768px) {
-      padding: 30px;
+    @media (min-width: 768px) {
+      padding: 0;
     }
   }
 
