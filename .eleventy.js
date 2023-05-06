@@ -1,7 +1,15 @@
-const PostCSSPlugin = require("eleventy-plugin-postcss");
+const CleanCSS = require("clean-css");
 
 module.exports = function (config) {
-  config.addPassthroughCopy("images");
-  config.addPassthroughCopy("styles");
-  config.addPlugin(PostCSSPlugin);
+  config.addPassthroughCopy("src/images");
+  config.addFilter("cssmin", function (code) {
+    return new CleanCSS({}).minify(code).styles;
+  });
+
+  return {
+    dir: {
+      input: "src",
+      output: "_site",
+    },
+  };
 };

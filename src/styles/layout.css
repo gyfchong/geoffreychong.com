@@ -1,0 +1,42 @@
+@layer layout {
+  .wrapper {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 0 20px;
+
+    @media (max-width: 768px) {
+      max-width: 500px;
+    }
+  }
+
+  .content {
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+    max-width: 1080px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (min-width: 769px) {
+      grid-column-gap: 10px;
+    }
+  }
+
+  .footer__link {
+    display: block;
+    padding: 10px 15px;
+    font-size: 0.75em;
+    font-weight: 700;
+  }
+}

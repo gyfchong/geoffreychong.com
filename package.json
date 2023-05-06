@@ -16,8 +16,11 @@
   },
   "packageManager": "pnpm@8.4.0",
   "scripts": {
-    "start": "npx @11ty/eleventy-dev-server",
-    "build": "rimraf _site && npx @11ty/eleventy"
+    "start": "concurrently \"pnpm dev\" \"pnpm dev:css\"",
+    "dev": "npx @11ty/eleventy --serve",
+    "dev:css": "pnpm build:css --watch",
+    "build": "rimraf _site && pnpm build:css && npx @11ty/eleventy",
+    "build:css": "postcss src/styles/_index.css -o src/_includes/styles.css"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
@@ -27,6 +30,8 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-dev-server": "^1.0.4",
     "autoprefixer": "^10.4.14",
+    "clean-css": "^5.3.2",
+    "concurrently": "^8.0.1",
     "cssnano": "^6.0.1",
     "eleventy-plugin-postcss": "^1.0.4",
     "postcss": "^8.4.23",

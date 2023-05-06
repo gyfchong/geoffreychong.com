@@ -1,0 +1,78 @@
+@layer utilities {
+  .tiny-heading {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .large-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff;
+    font-weight: 700;
+    color: #092757;
+    background-color: var(--link-colour);
+    border-radius: 3px;
+    text-decoration: none;
+
+    &:hover {
+      color: #000;
+      background-color: var(--link-colour-hover);
+    }
+
+    @media (max-width: 325px) {
+      display: block;
+      padding: 15px 20px;
+      text-align: center;
+    }
+  }
+
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /*
+   * Hide only visually, but have it available for screen readers:
+   * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+   *
+   * 1. For long content, line feeds are not interpreted as spaces and small width
+   *    causes content to wrap 1 word per line:
+   *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+   */
+
+  .sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
+  }
+
+  /*
+   * Extends the .sr-only class to allow the element
+   * to be focusable when navigated to via the keyboard:
+   * https://www.drupal.org/node/897638
+   */
+
+  .sr-only.focusable:active,
+  .sr-only.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+  }
+}

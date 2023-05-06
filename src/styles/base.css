@@ -1,0 +1,64 @@
+@layer base {
+  @font-face {
+    font-family: "Noto Sans-fallback";
+    size-adjust: 106.62%;
+    ascent-override: 102%;
+    src: local("Arial");
+  }
+
+  html {
+    --body-colour: #444;
+    --link-colour: #4973b7;
+    --link-colour-hover: #b7398c;
+    --background-colour: #fff;
+
+    @media (prefers-color-scheme: dark) {
+      --body-colour: #fff;
+      --link-colour: #739ad9;
+      --link-colour-hover: #ffabe2;
+      --background-colour: #131313;
+    }
+
+    &.dark-mode {
+      --body-colour: #fff;
+      --link-colour: #739ad9;
+      --link-colour-hover: #ffabe2;
+      --background-colour: #131313;
+    }
+  }
+
+  body {
+    box-sizing: border-box;
+    color: #444;
+    font-family: "Noto Sans", "Noto Sans-fallback", system-ui, -apple-system,
+      BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--body-colour);
+    background-color: var(--background-colour);
+  }
+
+  * {
+    box-sizing: inherit;
+  }
+
+  p {
+    line-height: 1.875;
+    margin-bottom: 15px;
+  }
+
+  a {
+    color: var(--link-colour);
+    transition: all 0.3s ease;
+  }
+
+  a:hover {
+    color: var(--link-colour-hover);
+    transition: all 0.3s ease;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+}
