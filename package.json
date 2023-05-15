@@ -14,7 +14,7 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "pnpm@8.5.0",
+  "packageManager": "pnpm@8.5.1",
   "scripts": {
     "start": "concurrently \"pnpm dev\" \"pnpm dev:css\"",
     "dev": "npx @11ty/eleventy --serve",
