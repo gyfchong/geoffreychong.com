@@ -27,7 +27,6 @@ module.exports = (eleventyConfig) => {
         class: className,
         alt,
         sizes,
-        loading: "lazy",
         decoding: "async",
       };
       return eleventyImage.generateHTML(metadata, imageAttributes);
