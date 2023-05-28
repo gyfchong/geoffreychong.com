@@ -4,6 +4,7 @@
     size-adjust: 106.62%;
     ascent-override: 102%;
     src: local("Arial");
+    display: swap;
   }
 
   html {

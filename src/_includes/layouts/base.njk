@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{{ "Geoffrey Chong" or metadata.title }}</title>
+    
+    <meta name="description" content="{{ description or metadata.description }}">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
+
+    <meta property="og:title" content="{{ metadata.title }}" />
+    <meta
+      property="og:description"
+      content="{{ description or metadata.description }}"
+    />
+    <meta property="og:image" content="images/me.webp" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://json-ld.org/contexts/person.jsonld",
+        "@type": "Person",
+        "name": "Geoffrey Chong",
+        "jobTitle": "Design System Tech Lead",
+        "email": "hi@geoffreychong.com",
+        "alumniOf": "Edith Cowan University, Perth",
+        "height": "160cm",
+        "gender": "male",
+        "nationality": "Australian",
+        "colleague": ["http://ttaiyo.com"],
+        "image": "images/me.webp",
+        "url": "https://geoffreychong.com",
+        "sameAs": [
+          "https://au.linkedin.com/in/geoffreychong",
+          "https://github.com/gyfchong",
+          "http://twitter.com/gyfchong",
+          "https://www.facebook.com/gyfchong"
+        ]
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    />
+
+    <link
+      rel="stylesheet"
+      media="print"
+      onload="this.onload=null;this.removeAttribute('media');"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    />
+
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      />
+    </noscript>
+
+    <link rel="stylesheet" href="styles/_index.css">
+</style>
+    
+  </head>
+  <body>
+    <!--[if lte IE 11]>
+      <div class="page-warning">
+        We've noticed that you're using an unsupported version of Internet
+        Explorer. For the best experience please
+        <a
+          href="http://windows.microsoft.com/en-au/internet-explorer/download-ie"
+          target="_blank"
+          rel="nofollow"
+          >upgrade</a
+        >
+        or
+        <a href="http://browsehappy.com/" target="_blank" rel="nofollow"
+          >use another browser</a
+        >.
+      </div>
+    <![endif]-->
+    <a href="#content" class="skip-to-content-link">Skip to main content</a>
+    <div class="wrapper">
+
+      {{ content | safe }}
+
+      <footer class="footer">
+        <ul class="list footer-links" role="list">
+          <li class="list__item">
+            <a
+              class="footer__link"
+              rel="noopener"
+              href="mailto:me@geoffreychong.com"
+              target="_blank">
+            Email</a>
+          </li>
+          <li class="list__item">
+            <a
+              class="footer__link"
+              rel="noopener"
+              href="https://au.linkedin.com/in/geoffreychong"
+              target="_blank"
+              >Linkedin</a
+            >
+          </li>
+          <li class="list__item">
+            <a
+              class="footer__link"
+              rel="noopener"
+              href="https://github.com/gyfchong"
+              target="_blank"
+              >Github</a
+            >
+          </li>
+          <li class="list__item">
+            <a
+              class="footer__link"
+              rel="noopener"
+              href="http://twitter.com/gyfchong"
+              target="_blank"
+              >Twitter</a
+            >
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

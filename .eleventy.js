@@ -1,10 +1,13 @@
-const CleanCSS = require("clean-css");
+const PostCSSPlugin = require("eleventy-plugin-postcss");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginImages = require("./config/image");
 
-module.exports = function (config) {
-  config.addPassthroughCopy("src/images");
-  config.addFilter("cssmin", function (code) {
-    return new CleanCSS({}).minify(code).styles;
-  });
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(pluginImages);
+  eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
+
+  eleventyConfig.addPlugin(PostCSSPlugin);
+  eleventyConfig.addPlugin(pluginRss);
 
   return {
     dir: {
