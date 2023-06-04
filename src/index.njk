@@ -2,36 +2,37 @@
 layout: layouts/base.njk
 ---
 
-<main id="content" class="content">
-  <section class="biography">
-    <div class="headshot">
-      {% image "images/me_400.webp", "profile-image", "A portrait of Geoffrey Chong", [400], "(max-width: 768px) 160px, 400px" %}
-    </div>
-    <div class="about-me">
-      <div class="headline">
-        <h1 class="tiny-heading">
-          Introduction <span class="sr-only">to Geoffrey Chong</span>
-        </h1>
-        <p class="tagline">
-          <span class="large-text">Hi, I&rsquo;m Geoff.</span><br />Design
-          Engineer &amp; best practice advocate.
-        </p>
+<div class="content">
+  <div class="wrapper">
+    <section class="biography">
+      <div class="headshot">
+        {% image "images/me_400.webp", "profile-image", "A portrait of Geoffrey Chong", [400], "(max-width: 768px) 160px, 400px" %}
       </div>
-      <div class="main-body">
-        <p>
-          <strong>I currently work</strong> for
-          <a rel="noopener" href="http://cultureamp.com" target="_blank">Culture Amp</a>
-          as the lead on their Design Systems technical lead, managing the
-          <a
-            rel="noopener"
-            href="http://cultureamp.design"
-            target="_blank"
-            >Kaizen Design System</a
-          >.
-        </p>
-        <button class="button" href="mailto:hi@geoffreychong.com">Get in touch</button>
+      <div class="about-me">
+        <div class="headline">
+          <h1 class="tiny-heading">
+            Introduction <span class="sr-only">to Geoffrey Chong</span>
+          </h1>
+          <p class="tagline">
+            <span class="large-text">Hi, I&rsquo;m Geoff.</span><br />Design
+            Engineer &amp; best practice advocate.
+          </p>
+        </div>
+        <div class="main-body">
+          <p>
+            <strong>I currently work</strong> for
+            <a rel="noopener" href="http://cultureamp.com" target="_blank">Culture Amp</a>
+            as the lead on their Design Systems technical lead, managing the
+            <a
+              rel="noopener"
+              href="http://cultureamp.design"
+              target="_blank"
+              >Kaizen Design System</a
+            >.
+          </p>
+          <button class="button" href="mailto:hi@geoffreychong.com">Get in touch</button>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
-
+    </section>
+  </div>
+</div>
