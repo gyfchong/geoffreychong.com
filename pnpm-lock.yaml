@@ -24,7 +24,7 @@ devDependencies:
     version: 3.1.8
   '@11ty/eleventy-plugin-bundle':
     specifier: ^1.0.4
-    version: 1.0.4
+    version: 1.0.5
   '@11ty/eleventy-plugin-rss':
     specifier: ^1.2.0
     version: 1.2.0
@@ -116,8 +116,8 @@ packages:
       - supports-color
     dev: true
 
-  /@11ty/eleventy-plugin-bundle@1.0.4:
-    resolution: {integrity: sha512-3qk7I95/hiTdvLEzitHfiK00heF2qtDq3T+N89SbbcNing31fq6A0suK/f6AOK5xdp/VpxfjWg3bqky+0XD+1Q==}
+  /@11ty/eleventy-plugin-bundle@1.0.5:
+    resolution: {integrity: sha512-Esv97j+mOo/yfxjaWl4j8CyszOBsRjU/DOUWOBqVnnDLM8VDXeus2LTJUxF70nAU0g+z+b6fRn8fKnm6b2a/UQ==}
     engines: {node: '>=14'}
     dependencies:
       debug: 4.3.4
