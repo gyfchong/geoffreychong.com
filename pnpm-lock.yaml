@@ -51,7 +51,7 @@ devDependencies:
     version: 15.1.0(postcss@8.4.38)
   postcss-nesting:
     specifier: ^12.0.0
-    version: 12.1.1(postcss@8.4.38)
+    version: 12.1.2(postcss@8.4.38)
   rimraf:
     specifier: ^5.0.1
     version: 5.0.5
@@ -457,13 +457,12 @@ packages:
     dev: true
     optional: true
 
-  /bare-fs@2.2.2:
-    resolution: {integrity: sha512-X9IqgvyB0/VA5OZJyb5ZstoN62AzD7YxVGog13kkfYWYqJYcK0kcqLZ6TrmH5qr4/8//ejVcX4x/a0UvaogXmA==}
+  /bare-fs@2.2.3:
+    resolution: {integrity: sha512-amG72llr9pstfXOBOHve1WjiuKKAMnebcmMbPWDZ7BCevAoJLpugjuAPRsDINEyjT0a6tbaVx3DctkXIRbLuJw==}
     requiresBuild: true
     dependencies:
       bare-events: 2.2.0
-      bare-os: 2.2.0
-      bare-path: 2.1.0
+      bare-path: 2.1.1
       streamx: 2.16.1
     dev: true
     optional: true
@@ -474,8 +473,8 @@ packages:
     dev: true
     optional: true
 
-  /bare-path@2.1.0:
-    resolution: {integrity: sha512-DIIg7ts8bdRKwJRJrUMy/PICEaQZaPGZ26lsSx9MJSwIhSrcdHn7/C8W+XmnG/rKi6BaRcz+JO00CjZteybDtw==}
+  /bare-path@2.1.1:
+    resolution: {integrity: sha512-OHM+iwRDRMDBsSW7kl3dO62JyHdBKO3B25FB9vNQBPcGHMo4+eA8Yj41Lfbk3pS/seDY+siNge0LdRTulAau/A==}
     requiresBuild: true
     dependencies:
       bare-os: 2.2.0
@@ -2073,8 +2072,8 @@ packages:
       postcss-selector-parser: 6.0.16
     dev: true
 
-  /postcss-nesting@12.1.1(postcss@8.4.38):
-    resolution: {integrity: sha512-qc74KvIAQNa5ujZKG1UV286dhaDW6basbUy2i9AzNU/T8C9hpvGu9NZzm1SfePe2yP7sPYgpA8d4sPVopn2Hhw==}
+  /postcss-nesting@12.1.2(postcss@8.4.38):
+    resolution: {integrity: sha512-FUmTHGDNundodutB4PUBxt/EPuhgtpk8FJGRsBhOuy+6FnkR2A8RZWIsyyy6XmhvX2DZQQWIkvu+HB4IbJm+Ew==}
     engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
       postcss: ^8.4
@@ -2813,8 +2812,8 @@ packages:
       pump: 3.0.0
       tar-stream: 3.1.7
     optionalDependencies:
-      bare-fs: 2.2.2
-      bare-path: 2.1.0
+      bare-fs: 2.2.3
+      bare-path: 2.1.1
     dev: true
 
   /tar-stream@2.2.0:
