@@ -23,8 +23,8 @@ devDependencies:
     specifier: ^3.1.0
     version: 3.1.8
   '@11ty/eleventy-plugin-bundle':
-    specifier: ^1.0.4
-    version: 1.0.5
+    specifier: ^2.0.0
+    version: 2.0.2
   '@11ty/eleventy-plugin-rss':
     specifier: ^1.2.0
     version: 1.2.0
@@ -116,9 +116,9 @@ packages:
       - supports-color
     dev: true
 
-  /@11ty/eleventy-plugin-bundle@1.0.5:
-    resolution: {integrity: sha512-Esv97j+mOo/yfxjaWl4j8CyszOBsRjU/DOUWOBqVnnDLM8VDXeus2LTJUxF70nAU0g+z+b6fRn8fKnm6b2a/UQ==}
-    engines: {node: '>=14'}
+  /@11ty/eleventy-plugin-bundle@2.0.2:
+    resolution: {integrity: sha512-zGyPp1g6bi+VC2I5ylwj4w29nivDmx4Uki5gWY6v3MT/1muK0JTtnc1KOMC7yUurv6YwtwdiLYyFK2eFyKv2wg==}
+    engines: {node: '>=18'}
     dependencies:
       debug: 4.3.4
     transitivePeerDependencies:
