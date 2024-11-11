@@ -47,8 +47,8 @@ devDependencies:
     specifier: ^10.1.0
     version: 10.1.0(postcss@8.4.48)
   postcss-import:
-    specifier: ^15.1.0
-    version: 15.1.0(postcss@8.4.48)
+    specifier: ^16.0.0
+    version: 16.1.0(postcss@8.4.48)
   postcss-nesting:
     specifier: ^12.0.0
     version: 12.1.5(postcss@8.4.48)
@@ -1989,9 +1989,9 @@ packages:
       postcss: 8.4.48
     dev: true
 
-  /postcss-import@15.1.0(postcss@8.4.48):
-    resolution: {integrity: sha512-hpr+J05B2FVYUAXHeK1YyI267J/dDDhMU6B6civm8hSY1jYJnBXxzKDKDswzJmtLHryrjhnDjqqp/49t8FALew==}
-    engines: {node: '>=14.0.0'}
+  /postcss-import@16.1.0(postcss@8.4.48):
+    resolution: {integrity: sha512-7hsAZ4xGXl4MW+OKEWCnF6T5jqBw80/EE9aXg1r2yyn1RsVEU8EtKXbijEODa+rg7iih4bKf7vlvTGYR4CnPNg==}
+    engines: {node: '>=18.0.0'}
     peerDependencies:
       postcss: ^8.0.0
     dependencies:
@@ -2741,7 +2741,7 @@ packages:
       queue-tick: 1.0.1
       text-decoder: 1.1.1
     optionalDependencies:
-      bare-events: 2.2.0
+      bare-events: 2.5.0
     dev: true
     optional: true
 
