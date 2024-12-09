@@ -23,8 +23,8 @@ devDependencies:
     specifier: ^3.1.0
     version: 3.1.8
   '@11ty/eleventy-plugin-bundle':
-    specifier: ^1.0.4
-    version: 1.0.5
+    specifier: ^3.0.0
+    version: 3.0.0(posthtml@0.16.6)
   '@11ty/eleventy-plugin-rss':
     specifier: ^1.2.0
     version: 1.2.0
@@ -116,12 +116,14 @@ packages:
       - supports-color
     dev: true
 
-  /@11ty/eleventy-plugin-bundle@1.0.5:
-    resolution: {integrity: sha512-Esv97j+mOo/yfxjaWl4j8CyszOBsRjU/DOUWOBqVnnDLM8VDXeus2LTJUxF70nAU0g+z+b6fRn8fKnm6b2a/UQ==}
-    engines: {node: '>=14'}
+  /@11ty/eleventy-plugin-bundle@3.0.0(posthtml@0.16.6):
+    resolution: {integrity: sha512-JSnqehT+sWSPi6e44jTXUW+KiV9284YF9fzPQvfGB4cXlk/m/SJk17CavHCleIvKXDN+jrUw9TZkwAwr85ONWQ==}
+    engines: {node: '>=18'}
     dependencies:
       debug: 4.3.4
+      posthtml-match-helper: 2.0.2(posthtml@0.16.6)
     transitivePeerDependencies:
+      - posthtml
       - supports-color
     dev: true
 
@@ -2295,6 +2297,15 @@ packages:
       source-map-js: 1.2.1
     dev: true
 
+  /posthtml-match-helper@2.0.2(posthtml@0.16.6):
+    resolution: {integrity: sha512-ehnazjlSwcGa3P2LlFYmTmcnaembTSt9dLWIRRDVHDPidf6InWAr9leKeeLvUXgnU32g6BrFS64Je+c2Ld+l9g==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      posthtml: ^0.16.6
+    dependencies:
+      posthtml: 0.16.6
+    dev: true
+
   /posthtml-parser@0.11.0:
     resolution: {integrity: sha512-QecJtfLekJbWVo/dMAA+OSwY79wpRmbqS5TeXvXSX+f0c6pW4/SE6inzZ2qkU7oAMCPqIDkZDvd/bQsSFUnKyw==}
     engines: {node: '>=12'}
@@ -2741,7 +2752,7 @@ packages:
       queue-tick: 1.0.1
       text-decoder: 1.1.1
     optionalDependencies:
-      bare-events: 2.2.0
+      bare-events: 2.5.0
     dev: true
     optional: true
 
