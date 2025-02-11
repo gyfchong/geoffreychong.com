@@ -57,7 +57,7 @@ devDependencies:
     version: 5.0.10
   svgo:
     specifier: ^3.0.2
-    version: 3.3.1
+    version: 3.3.2
 
 packages:
 
@@ -739,7 +739,7 @@ packages:
       boolbase: 1.0.0
       css-what: 6.1.0
       domhandler: 5.0.3
-      domutils: 3.1.0
+      domutils: 3.2.2
       nth-check: 2.1.1
     dev: true
 
@@ -947,8 +947,8 @@ packages:
       domhandler: 4.3.1
     dev: true
 
-  /domutils@3.1.0:
-    resolution: {integrity: sha512-H78uMmQtI2AhgDJjWeQmHwJJ2bLPD3GMmO7Zja/ZZh84wkm+4ut+IUnUdRa8uCGX88DiVx1j6FRe1XfxEgjEZA==}
+  /domutils@3.2.2:
+    resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
     dependencies:
       dom-serializer: 2.0.0
       domelementtype: 2.3.0
@@ -2260,7 +2260,7 @@ packages:
     dependencies:
       postcss: 8.5.2
       postcss-value-parser: 4.2.0
-      svgo: 3.3.1
+      svgo: 3.3.2
     dev: true
 
   /postcss-unique-selectors@6.0.4(postcss@8.5.2):
@@ -2823,8 +2823,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svgo@3.3.1:
-    resolution: {integrity: sha512-xQQTIGRl3gHTO2PFlZFLl+Xwofj+CMOPitfoByGBNAniQnY6SbGgd31u3C8RTqdlqZqYNl9Sb83VXbimVHcU6w==}
+  /svgo@3.3.2:
+    resolution: {integrity: sha512-OoohrmuUlBs8B8o6MB2Aevn+pRIH9zDALSR+6hhqVfa6fRwG/Qw9VUMSMW9VNg2CFc/MTIfabtdOVl9ODIJjpw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -2834,7 +2834,7 @@ packages:
       css-tree: 2.3.1
       css-what: 6.1.0
       csso: 5.0.5
-      picocolors: 1.0.0
+      picocolors: 1.1.1
     dev: true
 
   /tar-fs@2.1.1:
