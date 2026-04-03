@@ -1,8 +1,8 @@
-const PostCSSPlugin = require("eleventy-plugin-postcss");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginImages = require("./config/image");
+import PostCSSPlugin from "eleventy-plugin-postcss";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import pluginImages from "./config/image.mjs";
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginImages);
   eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
 
@@ -15,4 +15,4 @@ module.exports = function (eleventyConfig) {
       output: "_site",
     },
   };
-};
+}

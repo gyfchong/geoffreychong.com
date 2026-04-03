@@ -1,7 +1,10 @@
-const path = require("path");
+import path from "path";
+import { createRequire } from "module";
+
+const require = createRequire(import.meta.url);
 const eleventyImage = require("@11ty/eleventy-img");
 
-module.exports = (eleventyConfig) => {
+export default (eleventyConfig) => {
   function relativeToInputPath(inputPath, relativeFilePath) {
     let split = inputPath.split("/");
     split.pop();
@@ -20,7 +23,7 @@ module.exports = (eleventyConfig) => {
         widths: widths || ["auto"],
         formats,
         srcset,
-        outputDir: path.join(eleventyConfig.dir.output, "img"), // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
+        outputDir: path.join(eleventyConfig.dir.output, "img"), // Advanced usage note: `eleventyConfig.dir` works here because we're using addPlugin.
       });
 
       let imageAttributes = {
