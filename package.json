@@ -16,7 +16,7 @@
   },
   "packageManager": "pnpm@10.33.0",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve --quiet",
+    "start": "npx @11ty/eleventy --serve --quiet --port 4400",
     "build": "rimraf _site && npx @11ty/eleventy",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
     "debugstart": "DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
